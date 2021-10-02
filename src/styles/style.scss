@@ -19,9 +19,11 @@ $buttonBG: blueviolet;
     justify-content: space-between;
     align-items: center;
 
-    h2 {
+    h2, a {
         margin: 0;
         text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bolder;
         padding: 6px;
 
         span {
