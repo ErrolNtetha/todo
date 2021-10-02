@@ -7,7 +7,9 @@ export default function Header() {
     return (
         <React.Fragment>
             <section className="headerContainer">
-            <h2> todo<span>app</span> </h2>
+            <Link to="/" className="h2"> 
+                <h2> todo<span>app</span> </h2>
+            </Link>
             {
                 show ? 
                 <nav className="navContainer">
