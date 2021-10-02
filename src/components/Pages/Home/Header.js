@@ -3,7 +3,7 @@ import { FaBars } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 export default function Header() {
-    const [ show, setShow ] = useState(true)
+    const [ show, setShow ] = useState(false)
     return (
         <React.Fragment>
             <section className="headerContainer">
