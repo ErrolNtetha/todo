@@ -8,17 +8,20 @@ import FAQ from './components/Pages/FAQ';
 
 import './App.css'
 import './styles/style.scss'
+import { TodosContext } from './TodoContext';
 
 function App() {
   return (
     <Router>
-        <Header />
+      <TodosContext> 
+      <Header />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/activities" component={Activity} />
         <Route path="/about" component={About} />
         <Route path="/faq" component={FAQ} />
       </Switch>
+      </TodosContext>
     </Router> 
   );
 }
