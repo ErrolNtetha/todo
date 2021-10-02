@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { TodoContext } from '../../../TodoContext'
+
 
 export default function Activity() {
+
+    const [todos, setTodos ] = useContext(TodoContext)
+
     return (
         <React.Fragment>
             <section>
-                <section className='todoContainer'>
-                    <h3>These are to dos!!</h3>
-                </section>
+                {todos.map(i => <p> {i.name} </p>)} 
             </section>
         </React.Fragment>
     )
