@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { FaBars } from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 export default function Header() {
@@ -8,7 +8,7 @@ export default function Header() {
         <React.Fragment>
             <section className="headerContainer">
             <Link to="/" className="h2"> 
-                <h2> todo<span>app</span> </h2>
+                todo<span>app</span>
             </Link>
             {
                 show ? 
@@ -25,7 +25,12 @@ export default function Header() {
                     </ul>
                 </nav> : null
             }
-            <FaBars className="faBars" onClick={() => setShow(!show)} />
+
+            { show ? 
+            <FaTimes className="faBars" onClick={() => setShow(false)} />
+            : 
+            <FaBars className="faBars" onClick={() => setShow(true)} />
+            }
             </section>
         </React.Fragment>
     )
