@@ -14,14 +14,12 @@ export default function Header() {
                 show ? 
                 <nav className="navContainer">
                     <ul className="navLinks" onClick={() => setShow(false)}>
-                        <Link to="/">
-                            <li>Home</li>
-                        </Link>
-                        <Link to="/activities">
-                            <li>Activities</li>
-                        </Link>
+                        <Link to="/"><li>Home</li></Link>
+                        <Link to="/activities"><li>Activities</li></Link>
+                        <Link to="/faq"><li>Dashboard</li></Link>
                         <Link to="/about"> <li>About</li></Link>
                         <Link to="/faq"><li>FAQ</li></Link>
+
                     </ul>
                 </nav> : null
             }
