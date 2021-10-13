@@ -1,13 +1,32 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5000
+
 
 // Configure environmental variable
 require('dotenv').config();
 
-app.get('/', (req, res) => {
-    res.send('<h2> Hello World! </h2>');
+// Router imports
+const register = require('./router/router');
+const home = require('./router/router');
+
+// Middlewares
+app.use(cors({
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"],
+}))
+app.use('/', home)
+app.use('/register', register);
+
+app.get('/users', (req, res) => {
+    res.send('<h2> These are the users </h2>');
+})
+
+app.post('/register', (req, res) => {
+    res.send(res.json());
+    console.log(res.data)
 }) 
 
 // Connect using the string on .env
