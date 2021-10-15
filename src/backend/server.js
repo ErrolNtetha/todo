@@ -1,9 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 const app = express();
-const PORT = process.env.PORT || 5000
+
+// Declare an environmental variable
+const PORT = process.env.PORT || 5000;
 
 
 // Configure environmental variable
@@ -15,13 +17,21 @@ const home = require('./router/router');
 
 // Middlewares
 app.use(cors({ origin: "http://localhost:3000", methods: ["GET", "POST"]}))
-app.use(bodyParser.json())
-app.use('/', home)
-app.use('/register', register);
+app.use(bodyParser.json());
+app.use('/', home);
+app.use('/signup', register);
 
 app.get('/users', (req, res) => {
-    res.send('<h2> These are the users </h2>');
-})
+    res.send('<h2> These are the users </h2>')
+});
+
+
+
+
+
+
+
+
 
 // Connect using the string on .env
 const url = process.env.URL
