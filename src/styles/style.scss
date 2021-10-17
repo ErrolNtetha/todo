@@ -180,46 +180,73 @@ $buttonBG: blueviolet;
 
 // Form Styles from below
 
+.button {
+        background: $buttonBG;
+        text-align: center;
+        padding: 6px 14px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 2rem;
+        margin-top: 1.2rem;
+        width: 100%;
+        text-transform: uppercase;
+}
+
 .loginContainer {
-    margin: 2rem auto;
+    border-radius: 5px;
     padding: 1rem;
-    // outline: 1px solid;
-    width: 60vw;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    height: 80vh;
+
+    .textFields {
+        width: 60vw;
+        padding: 20px;
+        border-radius: 20px;
+    }
 
     .textFields > span {
         display: flex;
-        margin: 1rem auto;
+        margin: .4rem auto;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        width: 100%;
 
     }
 
     label {
         align-self: flex-start;
+        font-weight: bold;
     }
 
     input {
-        border-radius: 1rem;
+        border-radius: 1.6rem;
         border: none;
         outline: none;
         padding: 8px 14px;
         width: 100%;
+
     }
 
     a {
         background: $buttonBG;
         text-align: center;
-        padding: 8px 14px;
+        padding: 6px 14px;
         font-weight: bold;
         text-decoration: none;
         color: #fff;
-        border-radius: 1rem;
-        width: 60%;
-        margin-top: 1.4rem;
+        border-radius: 2rem;
+        margin-top: 1.2rem;
+        width: 100%;
+        text-transform: uppercase;
+    }
+}
 
+.createContainer {
+    input {
+        
     }
 }
