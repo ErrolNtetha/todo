@@ -14,7 +14,7 @@ exports.userList = (req, res) => {
 
 // Catch all user data from the form in front-end
 exports.register_user = (req, res) => {
-    bcrypt.hash(req.body.passowrd, 10, (err, hash) => {
+    bcrypt.hash(req.body.password, 10, (err, hash) => {
         if(err) {
             return res.status(500).json({
                 error: err
@@ -22,9 +22,6 @@ exports.register_user = (req, res) => {
         }
         else {
             const password = hash;
-        }
-    })
-
             const firstName = req.body.firstName;
             const lastName = req.body.lastName;
             const email = req.body.email;
@@ -34,8 +31,10 @@ exports.register_user = (req, res) => {
     * Initialize all Schema field with the data
     */
     const data = new User({
-        firstName,
-        lastName,
+        name: {
+            firstName,
+            lastName,
+        },
         email,
         password,
     });
@@ -52,4 +51,8 @@ exports.register_user = (req, res) => {
             console.log(data)
         }
     })
+        }
+    })
+
+    
 }
