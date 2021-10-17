@@ -1,4 +1,5 @@
 const User = require('../schema/user.schema'); // Import the user Schema
+const bcrypt = require('bcrypt');
 
 /*
 * Create controllers for routes and export them to userRouter file
@@ -13,10 +14,20 @@ exports.userList = (req, res) => {
 
 // Catch all user data from the form in front-end
 exports.register_user = (req, res) => {
-    const firstName = req.body.firstName;
-    const lastName = req.body.lastName;
-    const email = req.body.email;
-    const password = req.body.password;
+    bcrypt.hash(req.body.passowrd, 10, (err, hash) => {
+        if(err) {
+            return res.status(500).json({
+                error: err
+            })
+        }
+        else {
+            const password = hash;
+        }
+    })
+
+            const firstName = req.body.firstName;
+            const lastName = req.body.lastName;
+            const email = req.body.email;
 
     /*
     * Get the data from the from the front-end
