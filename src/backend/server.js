@@ -12,18 +12,16 @@ const PORT = process.env.PORT || 5000;
 require('dotenv').config();
 
 // Router imports
-const register = require('./router/router');
-const home = require('./router/router');
+const register_user = require('./router/usersRouter');
+const userList = require('./router/usersRouter');
 
 // Middlewares
 app.use(cors({ origin: "http://localhost:3000", methods: ["GET", "POST"]}))
 app.use(bodyParser.json());
-app.use('/', home);
-app.use('/signup', register);
 
-app.get('/users', (req, res) => {
-    res.send('<h2> These are the users </h2>')
-});
+// Routes and their callback functions defined in as "controllers"
+app.use('/register', register_user);
+app.use('/users', userList);
 
 
 
@@ -41,8 +39,10 @@ mongoose.connect(url, {
     useUnifiedTopology: true
 });
 
-const db = mongoose.connection
-db.once("open", err => {
+const connection = mongoose.connection
+
+// Once the connection is open...
+connection.once("open", err => {
     if(err) {
         console.log("Error connecting to MongoDB...")
     }
