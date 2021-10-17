@@ -18,7 +18,7 @@ export default function CreateAccount() {
             password,
         }
 
-        axios.post('http://localhost:5000/signup', newAccountData)
+        axios.post('http://localhost:5000/register', newAccountData)
             .then(res =>  console.log(newAccountData))
             .catch(err => console.log("An error occurred: ", err))
     }
