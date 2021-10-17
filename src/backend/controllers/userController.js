@@ -23,8 +23,7 @@ exports.register_user = (req, res) => {
     * Initialize all Schema field with the data
     */
     const data = new User({
-        firstName,
-        lastName,
+        name: { firstName, lastName },
         email,
         password,
     });
