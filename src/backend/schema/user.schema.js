@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 * Define all possible fields for a user in the website
 */
 const userSchema = new mongoose.Schema({
-    name: { firstName: { type: String, required: true, }, firstName: { type: String, required: true, }, },
+    name: { firstName: { type: String, required: true, }, lastName: { type: String, required: true, }, },
     email: { type: String, required: [true, 'Please provide email address!'], },
     password: { type: String, min: 8, required: true, },
     description: String,
