@@ -35,7 +35,7 @@ export default function CreateAccount() {
                 <input type="text" name="lastName" placeholder="Last Names" onChange={(e) => setLastName(e.target.value)} />
                 <input type="email" name="email" placeholder="Your Email" onChange={(e) => setEmail(e.target.value)} />
                 <input type="password" name="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
-                <button onClick={onSubmit}> Signup </button>
+                <button className="submit button" onClick={onSubmit}> Signup </button>
             </section>
         </React.Fragment>
     )
