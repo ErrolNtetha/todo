@@ -26,33 +26,31 @@ exports.register_user = (req, res) => {
             const lastName = req.body.lastName;
             const email = req.body.email;
 
-    /*
-    * Get the data from the from the front-end
-    * Initialize all Schema field with the data
-    */
-    const data = new User({
-        name: {
-            firstName,
-            lastName,
-        },
-        email,
-        password,
-    });
+            /*
+            * Get the data from the from the front-end
+            * Initialize all Schema field with the data
+            */
+            const data = new User({
+                name: {
+                    firstName,
+                    lastName,
+                },
+                email,
+                password,
+            });
 
-    /* 
-    * Save that in the Mongoose
-    * Search if the id exists in mock database using the id in the param
-    */
-    data.save(function(err, req, res) {
-        if(err) {
-            console.log("Error saving to the database...", err);
-        }
-        else {
-            console.log(data)
+            /* 
+            * Save that in the Mongoose
+            * Search if the id exists in mock database using the id in the param
+            */
+            data.save(function(err, req, res) {
+                if(err) {
+                    console.log("Error saving to the database...", err);
+                }
+                else {
+                    console.log(data)
+                }
+            })
         }
     })
-        }
-    })
-
-    
 }
