@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Intro() {
     return (
@@ -9,8 +10,12 @@ export default function Intro() {
                     <p className="subPara"> Turning your idea to actionable steps. Dream it, we shall take you there. </p>
                     <section className="btn">
                         <span>
-                            <a href="##"> Create an account </a>
-                            <a href="##"> sign-in </a>
+                            <Link to="/register">
+                                Create an account
+                            </Link>
+                            <Link to="/login">
+                                sign-in                         
+                            </Link>
                         </span>
                     </section>
                 </section> 

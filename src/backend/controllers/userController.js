@@ -11,7 +11,7 @@ exports.userList = (req, res) => {
     // Get all the users already in database and list them all in "/users"
     res.send("Users list");
 }
-git 
+
 // Catch all user data from the form in front-end
 exports.register_user = (req, res) => {
     bcrypt.hash(req.body.password, 10, (err, hash) => {
