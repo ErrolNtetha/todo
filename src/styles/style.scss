@@ -193,7 +193,7 @@ $buttonBG: blueviolet;
         text-transform: uppercase;
 }
 
-.loginContainer {
+.loginContainer, .createWrapper {
     border-radius: 5px;
     padding: 1rem;
     display: flex;
@@ -201,7 +201,7 @@ $buttonBG: blueviolet;
     align-items: center;
     height: 80vh;
 
-    .textFields {
+    .textFields, .createContainer {
         width: 60vw;
         padding: 20px;
         border-radius: 20px;
@@ -214,10 +214,9 @@ $buttonBG: blueviolet;
         flex-direction: column;
         align-items: center;
         width: 100%;
-
     }
 
-    label {
+    label, .name {
         align-self: flex-start;
         font-weight: bold;
     }
@@ -226,12 +225,13 @@ $buttonBG: blueviolet;
         border-radius: 1.6rem;
         border: none;
         outline: none;
-        padding: 8px 14px;
+        padding: 10px 16px;
         width: 100%;
+        font-size: 1rem;
 
     }
 
-    a {
+    a, button {
         background: $buttonBG;
         text-align: center;
         padding: 6px 14px;
@@ -245,8 +245,15 @@ $buttonBG: blueviolet;
     }
 }
 
-.createContainer {
-    input {
-        
+.createContainer > * {
+    display: flex;
+    margin: .4rem auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .fsf {
+        text-decoration: none !important;
     }
 }
