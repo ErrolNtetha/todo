@@ -9,6 +9,7 @@ $background-color: #212529;
 $padding: .1rem 1rem;
 $body-textSize: 1rem;
 $buttonBG: blueviolet;
+$paddingBtn: 10px 16px;
 
 .headerContainer {
     background-color: $background-color;
@@ -19,7 +20,7 @@ $buttonBG: blueviolet;
     justify-content: space-between;
     align-items: center;
 
-    a {
+    .h2 {
         margin: 0;
         text-transform: uppercase;
         text-decoration: none;
@@ -48,6 +49,12 @@ $buttonBG: blueviolet;
         width: 70vw;
         position: fixed;
 
+        .navLinks {
+            margin-left: 5px;
+            padding: 0;
+
+        }
+
         ul {
             list-style-type: none;
 
@@ -56,6 +63,15 @@ $buttonBG: blueviolet;
                 display: flex;
                 align-items: center;
                 margin-bottom: 2rem;
+                text-decoration: none;
+                font-weight: bolder;
+                padding: 6px;
+                font-weight: 700;
+                color: #fff;
+
+                &:hover {
+                    border-left: 5px solid $buttonBG;
+                }
                 
                 li {
                     margin-left: 10px;
@@ -86,8 +102,8 @@ $buttonBG: blueviolet;
         p:first-child {
             color: $font-color;
             text-transform: uppercase;
-            font-size: 2rem;
-            line-height: 2.2rem;
+            font-size: 3rem;
+            line-height: 3.4rem;
             font-weight: 700;
             margin-bottom: .6rem;
         }
@@ -122,7 +138,7 @@ $buttonBG: blueviolet;
         a:first-child {
             border: 1px solid $buttonBG;
             background: $buttonBG;
-            padding: 8px 14px;
+            padding: $paddingBtn;
             color: #fff;
             text-decoration: none;
             text-transform: uppercase;
@@ -144,7 +160,7 @@ $buttonBG: blueviolet;
         a {
             border: 1px solid $buttonBG;
             background-color: transparent;
-            padding: 8px 14px;
+            padding: $paddingBtn;
             color: #fff;
             text-decoration: none;
             text-transform: uppercase;
