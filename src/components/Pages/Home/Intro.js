@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 export default function Intro() {
     return (
-        <React.Fragment>
             <section className="introWrapper">
                 <section className="introHero">
                     <p> your daily companion, <br /> Ready? </p>
@@ -20,6 +19,5 @@ export default function Intro() {
                     </section>
                 </section> 
             </section>
-        </React.Fragment>
     )
 }
