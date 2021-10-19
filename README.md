@@ -1,3 +1,7 @@
+## Proposed Layout Design:
+<img src="https://github.com/ErrolNtetha/todo/blob/login/src/components/assets/g1135.png" alt="design" />
+This is a designed i made with Inkcape, an svg program. These design are more likely to change overtime.
+
 # Overview
 A Todo web appliaction that is built using MongDB, Express, React and Node (MERN). The application is aimed at making the user experience much more enjoyable
 and rather a little different 'look and feel' than the ones you used to. 
@@ -18,13 +22,11 @@ Copy and paste this to your terminal and press `Enter`:
 git clone git@github.com:ErrolNtetha/todo.git
 ```
 
-## Step 2: Navigating to Project Folder
+## Step 2: Navigating to Project and Installing Project Dependencies
 After you have cloned this project you will have to go inside that folder by:
 ```
 cd todo
 ```
-
-## Step 3: Installing Project Dependencies
 You will then have to install all the modules that are used in this project in order for it to work.
 You will do this by typing this in your terminal, depending on your package manager you are using:
 ```
@@ -42,6 +44,16 @@ However, I shouldn't have created backend folder here by the way, but relax, thi
 
 So now that you have created a `.env` file, in the first line, copy and paste this:
 ```
-URL=mongodb+srv://username:<password>@cluster0.v8svw.azure.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+URL=mongodb+srv://username:<password>@cluster0.v8svw.azure.mongodb.net/test?retryWrites=true&w=majority
 ```
+Where `username` is your database username (don't confuse with MongoDB login username) and where `<password>` is also your database, not MongoDB login password. Now the server should be ready to be started soon. Please do note that changing the variable name to something else will affect the application. I would not recommend changing it, but if you see the need to change it to something else, then read on to familiarize yourself as to where you need to change this variable to match the one in your `.env` file.  
 
+## Step 5: Locating the Connection String
+After you have created your string, you will then have to use the `URL` variable for the database to work. Now all you have to do is navigating to the backend folder: `todo/src/backend/`. The file that we are actually interested in here is `server.js` where we will store our `URL` variable we created in `.env` that holds our MongoDB connection string. Now open `server.js` with your favorite text edotor and look for this code:
+```javascript
+// Connect using the string on .env which is store on URL variable
+const url = process.env.URL
+```
+In a case where you changed your `.env` variable name, `URL` to something else of your choice, you will need to change `URL` in `const url = process.env.URL` to match with your prefered variable name you chose.
+
+## Step 6: Starting the Project
