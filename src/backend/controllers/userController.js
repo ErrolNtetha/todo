@@ -10,6 +10,7 @@ const bcrypt = require('bcrypt');
 exports.userList = (req, res) => {
     // Get all the users already in database and list them all in "/users"
     res.send("Users list");
+    console.log(register_user)
 }
 
 // Catch all user data from the form in front-end
@@ -39,10 +40,7 @@ exports.register_user = (req, res) => {
                 password,
             });
 
-            /* 
-            * Save that in the Mongoose
-            * Search if the id exists in mock database using the id in the param
-            */
+
             data.save(function(err, req, res) {
                 if(err) {
                     console.log("Error saving to the database...", err);

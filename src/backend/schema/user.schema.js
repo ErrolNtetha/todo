@@ -12,6 +12,9 @@ const userSchema = new mongoose.Schema({
     description: String,
     age: { type: Number, min: [16, 'Too young!'], },
     gender: { type: String, enum: ['Male', 'Female'], },
+},
+{
+    timestamps: true
 });
 
 const UserModel = mongoose.model('User', userSchema);

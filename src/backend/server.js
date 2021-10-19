@@ -16,8 +16,9 @@ const register_user = require('./router/usersRouter');
 const userList = require('./router/usersRouter');
 
 // Middlewares
-app.use(cors({ origin: "http://localhost:3000", methods: ["GET", "POST"]}))
+app.use(cors({ origin: "http://localhost:3000", methods: ["GET", "POST"]}));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes and their callback functions defined in as "controllers"
 app.use('/register', register_user);
