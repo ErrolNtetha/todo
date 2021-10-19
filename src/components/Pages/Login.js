@@ -15,6 +15,8 @@ export default function Login() {
                         <Link to='/activities' submit login>
                         Login
                         </Link>
+                        {/* I will fix this below */}
+                        <p> New user? Register an account </p>
                     </span>
                 </section>
             </section>           
