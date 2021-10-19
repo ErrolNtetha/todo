@@ -41,6 +41,8 @@ export default function CreateAccount() {
                 <label htmlFor="Name"> Repeat Password: </label>
                 <input type="password" name="password" placeholder="Confirm Password" onChange={(e) => setPassword(e.target.value)} />
                 <Link className="submit button" onClick={onSubmit}> Signup </Link>
+                {/* I will fix this below */}
+                <p> Already have an account? </p>
             </section>
         </section>
     )
