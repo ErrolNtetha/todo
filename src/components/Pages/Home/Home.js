@@ -5,7 +5,7 @@ import Features from './Features'
 
 export default function Home() {
     return (
-        <div>
+        <div className='homePageContainer'>
             <Intro />
             <Features />
         </div>
