@@ -57,11 +57,15 @@ $buttonBG: blueviolet;
 /* End of header container here */
 
 .introWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96vh;
+
     .introHero {
         width: 80%;
         padding: 1.4rem;
         margin: 2rem auto;
-        height: max-content;
 
         p:first-child {
             color: $font-color;
@@ -245,15 +249,11 @@ $buttonBG: blueviolet;
     }
 }
 
-.createContainer > * {
+.createContainer {
     display: flex;
     margin: .4rem auto;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     width: 100%;
-
-    .fsf {
-        text-decoration: none !important;
-    }
 }
