@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { FaBars, FaHome, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 export default function Header() {
@@ -14,9 +14,9 @@ export default function Header() {
                 show ? 
                 <nav className="navContainer">
                     <ul className="navLinks" onClick={() => setShow(false)}>
-                        <Link to="/"><li>Home</li></Link>
+                        <Link to="/"> <FaHome /> <li>Home</li></Link>
                         <Link to="/activities"><li>Activities</li></Link>
-                        <Link to="/faq"><li>Dashboard</li></Link>
+                        <Link to="/dashboard"><li>Dashboard</li></Link>
                         <Link to="/about"> <li>About</li></Link>
                         <Link to="/faq"><li>FAQ</li></Link>
 
