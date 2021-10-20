@@ -355,3 +355,53 @@ $paddingBtn: 10px 16px;
         }
     }
 }
+
+.dashboardContainer {
+    display: flex;
+    justify-content: center;
+
+    .profileDashboard {
+        // display: flex;
+        // justify-content: center;
+        background: #fff;
+        height: max-content;
+        border-radius: 5px;
+        width: 90vw;
+        margin-top: 3rem;
+
+        .container {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .profilePicture {
+            color: #000;
+            font-size: 3rem;
+            top: -30%;
+            background: white;
+            position: absolute;
+            margin: auto;
+            height: 70px;
+            width: 70px;
+            border-radius: 3rem;
+            border: 2px solid #000
+        }
+
+        .profileStats {
+            display: flex;
+            justify-content: space-evenly;
+            color: black;
+            margin: 1rem 0;
+            width: 100%;
+
+
+            div {
+                padding: 1rem;
+                margin: 1rem;
+                font-weight: bolder;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
