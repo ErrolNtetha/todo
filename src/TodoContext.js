@@ -1,5 +1,4 @@
 import React, { useState, createContext } from 'react'
-import Activity from './components/Pages/Activity/Activity';
 
 export const TodoContext = createContext();
 

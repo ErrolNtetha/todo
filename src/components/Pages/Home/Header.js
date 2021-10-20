@@ -8,7 +8,7 @@ export default function Header() {
         <React.Fragment>
             <section className="headerContainer">
             <Link to="/" className="h2"> 
-                todo<span>app</span>
+                todo<span>app.</span>
             </Link>
             {
                 show ? 

@@ -112,7 +112,7 @@ $paddingBtn: 10px 16px;
             color: rgb(145, 143, 143);
             padding: 0;
             margin: 0;
-            font-size: .8rem;
+            font-size: 1rem;
             margin-bottom: .6rem;
 
         }
@@ -142,9 +142,9 @@ $paddingBtn: 10px 16px;
             color: #fff;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: .8rem;
+            font-size: 1.2rem;
             font-weight: bold;
-            border-radius: 1rem;
+            border-radius: 5rem;
             outline: none;
             display: block;
             margin: .4rem;
@@ -164,9 +164,9 @@ $paddingBtn: 10px 16px;
             color: #fff;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: .8rem;
+            font-size: 1.2rem;
             font-weight: bold;
-            border-radius: 1rem;
+            border-radius: 5rem;
             outline: none;
             display: block;
             margin: .4rem;
@@ -255,6 +255,7 @@ $paddingBtn: 10px 16px;
     label, .name {
         align-self: flex-start;
         font-weight: bold;
+        margin-top: 5px;
     }
 
     input {
@@ -272,6 +273,7 @@ $paddingBtn: 10px 16px;
         text-align: center;
         padding: 6px 14px;
         font-weight: bold;
+        font-size: 1rem;
         text-decoration: none;
         color: #fff;
         border-radius: 2rem;
@@ -288,4 +290,44 @@ $paddingBtn: 10px 16px;
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+
+.addTaskInput {
+    background: transparent;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    input {
+        padding: 14px;
+        font-size: 1rem;
+        outline: none;
+        border-radius: 5rem;
+        border: none;
+        margin: 10px;
+        width: 80%;
+    }
+}
+
+.taskListContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .taskSubContainer {
+        margin-top: 15px;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    .taskList {
+        width: 70vw;
+        background: white;
+        color: #000;
+        border-radius: 10px;
+        min-height: 40vh;
+        padding: 6px 10px;
+    }
 }
