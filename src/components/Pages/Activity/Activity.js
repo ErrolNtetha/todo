@@ -1,11 +1,8 @@
-import React, { useContext } from 'react'
-import { TodoContext } from '../../../TodoContext'
-import TaskList from './TaskList'
+import React from 'react';
+import TaskList from './TaskList';
 
 
 export default function Activity() {
-
-    const [todos, setTodos ] = useContext(TodoContext)
 
     return (
             <section>
