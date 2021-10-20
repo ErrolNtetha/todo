@@ -11,11 +11,6 @@ export const TodosContext = (props) => {
             todos: [ "cleaning", "studying", "laundry", "lunch with family"],
             id: 1,
         },
-        {
-            name: "Syanda Dlimini",
-            todos: [ "cleaning", "studying", "laundry", "lunch with family"],
-            id: 2,
-        },
     ])
 
     // Use the useEffect Hook here because we 
