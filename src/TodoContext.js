@@ -2,27 +2,24 @@ import React, { useState, createContext } from 'react'
 
 export const TodoContext = createContext();
 
-export const TodosContext = (props) => {
+export const TodosContext = ({children}) => {
 
     const [ todos, setTodos ] = useState([
         {
             name: "Mphumeleli Ntetha",
-            todos: [ "cleaning", "studying", "laundry", "lunch with family"],
+            tasks: [ "cleaning", "studying", "laundry", "lunch with family"],
             id: 1,
         },
         {
             name: "Syanda Dlimini",
-            todos: [ "cleaning", "studying", "laundry", "lunch with family"],
+            tasks: [ "cleaning", "studying", "laundry", "lunch with family"],
             id: 2,
         },
-    ])
-
-    // Use the useEffect Hook here because we 
-    // gonna be fetching all user data from MongoDB database
+    ]);
 
     return (
         <TodoContext.Provider value={[todos, setTodos]}>
-            {props.children}
+            {children}
         </TodoContext.Provider>    
     )
 }
