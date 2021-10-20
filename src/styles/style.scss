@@ -291,3 +291,43 @@ $paddingBtn: 10px 16px;
     align-items: center;
     width: 100%;
 }
+
+.addTaskInput {
+    background: transparent;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    input {
+        padding: 14px;
+        font-size: 1rem;
+        outline: none;
+        border-radius: 5rem;
+        border: none;
+        margin: 10px;
+        width: 80%;
+    }
+}
+
+.taskListContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .taskSubContainer {
+        margin-top: 15px;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    .taskList {
+        width: 70vw;
+        background: white;
+        color: #000;
+        border-radius: 10px;
+        min-height: 40vh;
+        padding: 6px 10px;
+    }
+}
