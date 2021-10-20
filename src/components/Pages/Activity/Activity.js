@@ -9,7 +9,7 @@ export default function Activity() {
     return (
         <React.Fragment>
             <section>
-                {todos.map(i => <p> {i.name} </p>)} 
+                 
             </section>
         </React.Fragment>
     )
