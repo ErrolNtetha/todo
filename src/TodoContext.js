@@ -6,14 +6,9 @@ export const TodosContext = ({children}) => {
 
     const [ todos, setTodos ] = useState([
         {
-            name: "Mphumeleli Ntetha",
-            tasks: [ "cleaning", "studying", "laundry", "lunch with family"],
+            name: "Errol",
+            tasks: [ "coding", "studying", "laundry", "lunch with family"],
             id: 1,
-        },
-        {
-            name: "Syanda Dlimini",
-            tasks: [ "cleaning", "studying", "laundry", "lunch with family"],
-            id: 2,
         },
     ]);
 
