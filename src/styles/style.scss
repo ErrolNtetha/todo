@@ -43,6 +43,8 @@ $paddingBtn: 10px 16px;
 
     .navContainer {
         background: black;
+        z-index: 999;
+        
         top: 0;
         left: 0;
         height: 100vh;
@@ -297,6 +299,7 @@ $paddingBtn: 10px 16px;
     position: fixed;
     bottom: 0;
     width: 100%;
+    display: flex;
 
     input {
         padding: 14px;
@@ -305,13 +308,14 @@ $paddingBtn: 10px 16px;
         border-radius: 5rem;
         border: none;
         margin: 10px;
-        width: 80%;
-        position: relative;
+        width: 100%;
     }
 
     .faPlus {
-        position: absolute;
         font-size: 1.8rem;
+        display: grid;
+        place-items: center;
+        margin-right: 10px;
     }
 }
 
@@ -326,6 +330,8 @@ $paddingBtn: 10px 16px;
 
     h2 {
         margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
     }
 
     .taskList {
@@ -341,6 +347,10 @@ $paddingBtn: 10px 16px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+
+                .faTrash {
+                    margin-left: 10px;
+                }
             }
         }
     }
