@@ -43,6 +43,8 @@ $paddingBtn: 10px 16px;
 
     .navContainer {
         background: black;
+        z-index: 999;
+        
         top: 0;
         left: 0;
         height: 100vh;
@@ -297,6 +299,7 @@ $paddingBtn: 10px 16px;
     position: fixed;
     bottom: 0;
     width: 100%;
+    display: flex;
 
     input {
         padding: 14px;
@@ -305,7 +308,14 @@ $paddingBtn: 10px 16px;
         border-radius: 5rem;
         border: none;
         margin: 10px;
-        width: 80%;
+        width: 100%;
+    }
+
+    .faPlus {
+        font-size: 1.8rem;
+        display: grid;
+        place-items: center;
+        margin-right: 10px;
     }
 }
 
@@ -320,6 +330,8 @@ $paddingBtn: 10px 16px;
 
     h2 {
         margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
     }
 
     .taskList {
@@ -329,5 +341,67 @@ $paddingBtn: 10px 16px;
         border-radius: 10px;
         min-height: 40vh;
         padding: 6px 10px;
+
+        .task {
+            p {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .faTrash {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.dashboardContainer {
+    display: flex;
+    justify-content: center;
+
+    .profileDashboard {
+        // display: flex;
+        // justify-content: center;
+        background: #fff;
+        height: max-content;
+        border-radius: 5px;
+        width: 90vw;
+        margin-top: 3rem;
+
+        .container {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .profilePicture {
+            color: #000;
+            font-size: 3rem;
+            top: -30%;
+            background: white;
+            position: absolute;
+            margin: auto;
+            height: 70px;
+            width: 70px;
+            border-radius: 3rem;
+            border: 2px solid #000
+        }
+
+        .profileStats {
+            display: flex;
+            justify-content: space-evenly;
+            color: black;
+            margin: 1rem 0;
+            width: 100%;
+
+
+            div {
+                padding: 1rem;
+                margin: 1rem;
+                font-weight: bolder;
+                font-size: 1.2rem;
+            }
+        }
     }
 }

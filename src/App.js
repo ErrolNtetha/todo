@@ -10,6 +10,7 @@ import { TodosContext } from './TodoContext';
 import Login from './components/Pages/Login';
 import './styles/style.scss';
 import './App.css';
+import Dashboard from './components/Pages/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/register" component={CreateAccount} />
         <Route path="/login" component={Login} />
         <Route path="/activities" component={Activity} />
+        <Route path="/dashboard" component={Dashboard} />
         <Route path="/about" component={About} />
         <Route path="/faq" component={FAQ} />
       </Switch>
