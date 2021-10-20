@@ -1,11 +1,10 @@
 import React, { useContext } from 'react'
-import { TodoContext } from '../../../TodoContext'
+import { FaPlus } from 'react-icons/fa'
 import TaskList from './TaskList'
 
 
 export default function Activity() {
 
-    const [todos, setTodos ] = useContext(TodoContext)
 
     return (
             <section>
@@ -15,6 +14,9 @@ export default function Activity() {
                  {/* Input field to add tasks... */}
                  <section className='addTaskInput'>
                      <input type="text" placeholder="What do you want to do today?" />
+                     <span  className='faPlus'>
+                         <FaPlus />                     
+                     </span>
                  </section>
             </section>
     )
